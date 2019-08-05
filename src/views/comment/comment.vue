@@ -1,10 +1,10 @@
 <template>
-  <router-view></router-view>
+  <div>comment</div>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style lang="less">
+<style>
 </style>

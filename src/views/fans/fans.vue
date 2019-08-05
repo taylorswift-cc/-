@@ -1,10 +1,10 @@
 <template>
-  <router-view></router-view>
+  <div>fans</div>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style lang="less">
+<style>
 </style>
