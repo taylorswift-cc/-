@@ -53,8 +53,8 @@
             <i class="el-icon-arrow-down el-icon--right"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>个人设置</el-dropdown-item>
-            <el-dropdown-item>退出登录</el-dropdown-item>
+            <el-dropdown-item @click.native="setting">个人设置</el-dropdown-item>
+            <el-dropdown-item @click.native="logout">退出登录</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </el-header>
@@ -66,6 +66,7 @@
 </template>
 
 <script>
+import store from '@/store/store.js'
 export default {
   data () {
     return {
@@ -75,6 +76,13 @@ export default {
   methods: {
     change () {
       this.isCollapse = !this.isCollapse
+    },
+    setting () {
+      this.$router.push('/setting')
+    },
+    logout () {
+      this.$router.push('/login')
+      store.clearUser()
     }
   }
 }
