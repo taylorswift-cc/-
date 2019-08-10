@@ -48,8 +48,8 @@
         <span class="text">江苏传智播客XXXX公司</span>
         <el-dropdown class="my_dropdown">
           <span class="el-dropdown-link">
-            <img src="../../assets/images/avatar.jpg" style="width:30px;vertical-align:middle" />
-            <span>葫芦小金刚</span>
+            <img :src="photo" style="width:30px;vertical-align:middle" />
+            <span>{{name}}</span>
             <i class="el-icon-arrow-down el-icon--right"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
@@ -70,7 +70,9 @@ import store from '@/store/store.js'
 export default {
   data () {
     return {
-      isCollapse: false
+      isCollapse: false,
+      photo: '',
+      name: ''
     }
   },
   methods: {
@@ -84,6 +86,10 @@ export default {
       this.$router.push('/login')
       store.clearUser()
     }
+  },
+  created () {
+    this.photo = store.getUser().photo
+    this.name = store.getUser().name
   }
 }
 </script>

@@ -7,8 +7,10 @@ import 'element-ui/lib/theme-chalk/index.css'
 import '@/styles/index.less'
 
 import axios from '@/api'
-Vue.prototype.$http = axios
 
+import MyCom from '@/components/index.js'
+Vue.prototype.$http = axios
+Vue.use(MyCom)
 Vue.use(elementUI)
 
 Vue.config.productionTip = false
