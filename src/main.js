@@ -9,6 +9,7 @@ import '@/styles/index.less'
 import axios from '@/api'
 
 import MyCom from '@/components/index.js'
+
 Vue.prototype.$http = axios
 Vue.use(MyCom)
 Vue.use(elementUI)

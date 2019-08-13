@@ -37,3 +37,12 @@ li {
   height: 178px;
   display: block;
 }
+.pubcontainer .ql-toolbar.ql-snow {
+  padding: 0 8px;
+}
+.pubcontainer .ql-container.ql-snow {
+  height: 300px;
+}
+.pubcontainer .el-dialog__body {
+  padding-bottom: 0;
+}
